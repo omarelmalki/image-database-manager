@@ -1,7 +1,7 @@
 # image-database-manager
 
 Image database manager, inspired by Facebook's Haystack, made for social media websites to improve performance with images
-- Stores images in three resolutions (thumbnail, small, and original resulution) to optimize the time needed to view an image in a smaller/bigger resolution
+- Stores images in three resolutions (thumbnail, small, and original resolution) to optimize the time needed to view an image in a smaller/bigger resolution
 - Avoids storing duplicates with SHA-256
 
 Libraries needed:
