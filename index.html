@@ -76,6 +76,12 @@ getJSON('http://localhost:8000/imgStore/list').then(function(data) {
           '<img border="0" alt="NoPic" src="http://localhost:8000/imgStore/read?res=thumb&img_id='+pic+'" ></a></th>' +
           '<th>' + pic + '</th>' +
           '<th></th>'+
+          '<th> <a href="http://localhost:8000/imgStore/read?res=small&img_id='+pic+'" >' +
+          '<button>Small Resolution</button></a></th>'+
+          '<th></th>'+
+          '<th> <a href="http://localhost:8000/imgStore/read?res=orig&img_id='+pic+'" >' +
+          '<button>Original Resolution</button></a></th>'+
+          '<th></th>'+
           '<th> <a href="http://localhost:8000/imgStore/delete?img_id='+pic+'" >' + 
           '<img border="0" alt="NoPic" src="http://findicons.com/files/icons/2015/24x24_free_application/24/erase.png" ></a></th>' +
           '</tr>');
