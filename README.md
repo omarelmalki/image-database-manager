@@ -26,4 +26,4 @@ How to view and edit a file visually on a localhost server:
 - Open server by going to http://localhost:8000
 - The server was made for testing purposes allowing the developer to insert, delete, list images and view them in different resolutions
 
-Made in 2021 by Omar El Malki and Emilien Duc
+Emilien Duc and Omar El Malki, EPFL, Switzerland, 2021
