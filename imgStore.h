@@ -24,7 +24,7 @@
 #include <stdint.h> // for uint32_t, uint64_t
 #include <openssl/sha.h> // for SHA256_DIGEST_LENGTH
 
-#define CAT_TXT "EPFL ImgStore binary"
+#define CAT_TXT "ImgStore binary"
 
 /* constraints */
 #define MAX_IMGST_NAME  31  // max. size of a ImgStore name
