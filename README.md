@@ -4,6 +4,8 @@ Image database manager, inspired by Facebook's Haystack, made for social media w
 - Stores images in three resolutions (thumbnail, small, and original resolution) to optimize the time needed to view an image in a smaller/bigger resolution
 - Avoids storing duplicates with SHA-256
 
+2min demo: https://youtu.be/1aOpSnXBTZc
+
 Libraries needed:
 - libssl (Ubuntu: sudo apt install libssl-dev libssl-doc, MacOS: brew install openssl)
 - libvips (Ubuntu: sudo apt-get install libvips-dev, MacOS: brew install vips)
