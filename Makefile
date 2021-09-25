@@ -1,7 +1,3 @@
-## ======================================================================
-## partial Makefile provided to students
-##
-
 LIBMONGOOSEDIR = libmongoose/
 ## don't forget to export LD_LIBRARY_PATH pointing to it
 # export LD_LIBRARY_PATH="${PWD}"/libmongoose
@@ -23,9 +19,6 @@ CFLAGS += -std=c11 -Wall -pedantic -g
 CFLAGS += -Wextra -Wfloat-equal -Wshadow                         \
 -Wpointer-arith -Wbad-function-cast -Wcast-align -Wwrite-strings \
 -Wconversion -Wunreachable-code 
-
-# ----------------------------------------------------------------------
-# feel free to update/modifiy this part as you wish
 
 # specific for testing
 # CHECK_TARGETS += tests/unit-test-dedup
@@ -120,39 +113,3 @@ static-check:
 
 style:
 	astyle -n -o -A8 -xt0 *.[ch]
-
-## ======================================================================
-## Feedback
-
-IMAGE=chappeli/pps21-feedback:week13
-## Note: vous pouvez changer le tag latest pour week04, ou week05, etc.
-
-REPO := $(shell git config --get remote.origin.url)
-SSH_DIR := $(HOME)/.ssh
-
-feedback:
-	@echo Will use $(REPO) inside container
-	@docker pull $(IMAGE)
-	@docker run -it --rm -e REPO=$(REPO) -v $(SSH_DIR):/opt/.ssh $(IMAGE)
-
-clone-ssh:
-	@-$(eval SSH_DIR := $(HOME)/.$(shell date "+%s;$$"|sha256sum|cut -c-32))
-	@cp -r $(HOME)/.ssh/. $(SSH_DIR)
-
-clean-fake-ssh:
-	@case $(SSH_DIR) in $(HOME)/\.????????????????????????????????) $(RM) -fr $(SSH_DIR) ;; *) echo "Dare not remove \"$(SSH_DIR)\"" ;; esac
-
-feedback-VM-CO: clone-ssh feedback clean-fake-ssh
-
-## ======================================================================
-## Submit
-
-SUBMIT_SCRIPT=../provided/submit.sh
-submit1: $(SUBMIT_SCRIPT)
-	@$(SUBMIT_SCRIPT) 1
-
-submit2: $(SUBMIT_SCRIPT)
-	@$(SUBMIT_SCRIPT) 2
-
-submit:
-	@printf 'what "make submit"??\nIt'\''s either "make submit1" or "make submit2"...\n'
